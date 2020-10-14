@@ -4,13 +4,12 @@
 typedef struct
 {
     int id;
-    int idBicicleta;
-    int idServicio;
-    eFecha fecha;
+    char descripcion[25];
+    int precio;
 }eServicio;
 
 #endif // SERVICIO_H_INCLUDED
 
-int mostrarServicos(eServico listado[], int tam);
-void mostrarServico(eServico unServico);
-int hardcodearServicos(eServico listado[], int tam, int cant);
+int mostrarServicios(eServicio listado[], int tam);
+void mostrarServicio(eServicio unServico);
+int hardcodearServicios(eServicio listado[], int tam, int cant);

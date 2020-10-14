@@ -11,7 +11,7 @@ float rodados[] = {20,26,27.5,29};
 int dias[] ={10,15,4,1,20,24,30,28,18,10,15};
 int meses[] ={8,4,12,3,9,11,12,2,1,10,15};
 int anios[] ={2000,2002,1999,1990,2005,2001,1998,1969,2003,2000,1999};
-char servicios[][20] = {"Limpieza","Parche","Centrado","Cadena"};
-int precios[] = {250,300,400,350};
+
+
 
 #endif // DATASTORE_H_INCLUDED

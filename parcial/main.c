@@ -5,9 +5,11 @@
 #include "bicicleta.h"
 #include "tipo.h"
 #include "color.h"
+#include "servicio.h"
 #define TAM 10
 #define TAM_T 4
 #define TAM_C 5
+#define TAM_S 4
 
 char menu();
 
@@ -19,6 +21,7 @@ int main()
     eBicicleta lista[TAM];
     eTipo lista_tipos[TAM_T];
     eColor lista_colores[TAM_C];
+    eServicio lista_servicios[TAM_S];
     int proximoID_tipo = 1000;
 
     if(inicializarBicicletas(lista, TAM)==0)
@@ -32,6 +35,7 @@ int main()
     //proximoID +=hardcodearBicicletas(lista,TAM,10);*/
     proximoID_tipo +=hardcodearTipos(lista_tipos,TAM_T,4);
     hardcodearColores(lista_colores,TAM_C,5);
+    hardcodearServicios(lista_servicios,TAM_S, 4);
 
     char seguir = 's';
     char confirma;
@@ -84,7 +88,7 @@ int main()
             break;
             case 'g':
             system("cls");
-            mostrarColores(lista_colores, TAM_C);
+            mostrarServicios(lista_servicios, TAM_S);
 
             break;/*
         case 'e':
