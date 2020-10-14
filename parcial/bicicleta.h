@@ -1,3 +1,5 @@
+#include "tipo.h"
+#include "color.h"
 #ifndef BICICLETA_H_INCLUDED
 #define BICICLETA_H_INCLUDED
 
@@ -23,3 +25,5 @@ int buscarBicicleta(eBicicleta listado[], int tam, int id);
 int bajaBicicleta(eBicicleta listado[], int tam);
 int modificarBicicleta(eBicicleta listado[], int tam);
 int hardcodearBicicletas(eBicicleta listado[], int tam, int cant);
+/*int mostrarBicicletasTodo(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT);
+void mostrarBicicletaTodo(eBicicleta unBicicleta, eColor unColor, eTipo unTipo);*/

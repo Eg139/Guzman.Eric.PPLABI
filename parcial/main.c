@@ -36,6 +36,7 @@ int main()
     proximoID_tipo +=hardcodearTipos(lista_tipos,TAM_T,4);
     hardcodearColores(lista_colores,TAM_C,5);
     hardcodearServicios(lista_servicios,TAM_S, 4);
+    hardcodearBicicletas(lista,TAM,4);
 
     char seguir = 's';
     char confirma;
@@ -74,6 +75,7 @@ int main()
         case 'd':
             system("cls");
             mostrarBicicletas(lista, TAM);
+            //mostrarBicicletasTodo(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T);
 
             break;
         case 'e':
@@ -90,35 +92,7 @@ int main()
             system("cls");
             mostrarServicios(lista_servicios, TAM_S);
 
-            break;/*
-        case 'e':
-            if(ordenarBicicletas_Sexo_altura(lista,TAM, ASC, ASC)==0)
-            {
-                printf("Se ordeno el vector \n\n");
-            }else{
-            printf("Problema al ordenar el vetor\n\n");
-            }
-
             break;
-        case 'f':
-
-            break;
-        case 'g':
-            printf("Ingrese el sexo que se va a mostrar: ");
-            fflush(stdin);
-            scanf("%c", &sexo);
-            mostrarXSexo(lista,TAM,sexo);
-            break;
-        case 'h':
-            printf("Ingrese el anio que se va a mostrar: ");
-            scanf("%d", &anio);
-            mostrarXAnio(lista,TAM,anio);
-            break;
-        case 'i':
-            mostrarDeportes(deporte,TAM_D);
-            break;
-
-*/
         case 'z':
             printf("Confirma salida?: ");
             fflush(stdin);
