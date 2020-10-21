@@ -55,3 +55,50 @@ int hardcodearServicios(eServicio listado[], int tam, int cant)
 
     return retorno;
 }
+
+int cargarDescripcionServicio(eServicio unServicio[], int tam, char descripcion[],int idTipo, float precio)
+{
+    int error = 1;
+    for(int i = 0; i < tam; i++)
+    {
+        if(unServicio[i].id == idTipo)
+        {
+            strcpy(descripcion, unServicio[i].descripcion);
+            precio = unServicio[i].precio;
+            error =0;
+            break;
+        }
+
+    }
+    return error;
+}
+int obtenerPrecio(eServicio unServicio[], int tam, int idTipo)
+{
+    int precio;
+    for(int i = 0; i < tam; i++)
+    {
+        if(unServicio[i].id == idTipo)
+        {
+            precio = unServicio[i].precio;
+            break;
+        }
+
+    }
+    return precio;
+}
+
+
+int validarIdServicio(int id,eServicio servicios[], int tam)
+{
+    int esValido = 0;
+    for(int i = 0; i < tam; i++)
+    {
+        if(servicios[i].id == id)
+        {
+            esValido =1;
+            break;
+        }
+
+    }
+    return esValido;
+}

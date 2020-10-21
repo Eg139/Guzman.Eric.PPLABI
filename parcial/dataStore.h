@@ -4,7 +4,7 @@
 
 int id_tipos[] = {1000,1001,1002,1003};
 char tipos [][20] ={"Rutera","Carrera","Mountain","BMX"};
-
+float rodados[] = {20,26,27.5,29};
 
 
 

@@ -49,3 +49,18 @@ int hardcodearTipos(eTipo listado[], int tam, int cant)
 
     return retorno;
 }
+
+int validarIdTipo(int id,eTipo unTipo[], int tam)
+{
+    int esValido = 0;
+    for(int i = 0; i < tam; i++)
+    {
+        if(unTipo[i].id == id)
+        {
+            esValido =1;
+            break;
+        }
+
+    }
+    return esValido;
+}

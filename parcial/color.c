@@ -51,3 +51,18 @@ int hardcodearColores(eColor listado[], int tam, int cant)
 
     return retorno;
 }
+
+int validarIdColor(int id,eColor colores[], int tam)
+{
+    int esValido = 0;
+    for(int i = 0; i < tam; i++)
+    {
+        if(colores[i].id == id)
+        {
+            esValido =1;
+            break;
+        }
+
+    }
+    return esValido;
+}

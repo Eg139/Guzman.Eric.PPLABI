@@ -1,21 +1,24 @@
 # depslib dependency file v1.0
-1602682553 source:c:\users\usuario\desktop\parcial\parcial\color.c
+1603250732 source:c:\users\usuario\desktop\parcial\parcial\color.c
 	"color.h"
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 
-1602676047 source:c:\users\usuario\desktop\parcial\parcial\fecha.c
+1603249378 source:c:\users\usuario\desktop\parcial\parcial\fecha.c
+	"fecha.h"
+	<stdio.h>
+	<stdlib.h>
 
-1602684242 source:c:\users\usuario\desktop\parcial\parcial\servicio.c
+1603250753 source:c:\users\usuario\desktop\parcial\parcial\servicio.c
 	"Servicio.h"
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 
-1602681121 source:c:\users\usuario\desktop\parcial\parcial\tipo.c
+1603250663 source:c:\users\usuario\desktop\parcial\parcial\tipo.c
 	"tipo.h"
 	<stdio.h>
 	<stdlib.h>
@@ -23,20 +26,26 @@
 	<string.h>
 	"dataStore.h"
 
-1602676449 source:c:\users\usuario\desktop\parcial\parcial\trabajo.c
+1603251693 source:c:\users\usuario\desktop\parcial\parcial\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"trabajo.h"
+	"bicicleta.h"
 
-1602687108 source:c:\users\usuario\desktop\parcial\parcial\bicicleta.c
+1603255224 source:c:\users\usuario\desktop\parcial\parcial\bicicleta.c
 	"bicicleta.h"
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 
-1602686579 c:\users\usuario\desktop\parcial\parcial\bicicleta.h
+1603255810 c:\users\usuario\desktop\parcial\parcial\bicicleta.h
 	"tipo.h"
 	"color.h"
 
-1602686627 source:c:\users\usuario\desktop\parcial\parcial\main.c
+1603255238 source:c:\users\usuario\desktop\parcial\parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -45,12 +54,20 @@
 	"tipo.h"
 	"color.h"
 	"servicio.h"
+	"trabajo.h"
 
-1602680986 c:\users\usuario\desktop\parcial\parcial\tipo.h
+1603254274 c:\users\usuario\desktop\parcial\parcial\tipo.h
 
-1602687026 c:\users\usuario\desktop\parcial\parcial\datastore.h
+1603216248 c:\users\usuario\desktop\parcial\parcial\datastore.h
 
-1602682484 c:\users\usuario\desktop\parcial\parcial\color.h
+1603254756 c:\users\usuario\desktop\parcial\parcial\color.h
 
-1602683838 c:\users\usuario\desktop\parcial\parcial\servicio.h
+1603254544 c:\users\usuario\desktop\parcial\parcial\servicio.h
+
+1603254061 c:\users\usuario\desktop\parcial\parcial\trabajo.h
+	"bicicleta.h"
+	"servicio.h"
+	"fecha.h"
+
+1603254636 c:\users\usuario\desktop\parcial\parcial\fecha.h
 
