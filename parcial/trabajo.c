@@ -182,3 +182,38 @@ int hardcodearTrabajos(eTrabajo trabajos[], int tam, int cant)
 
     return retorno;
 }
+/*
+int mostrarTotalTrabajosDeBicis(eBicicleta unaBici[], int tam, eTrabajo unTrabajo[], int tamT, eServicio servicios[], int tamS, eTipo lTipo[], int tamTipo, eColor colores[],int tamC, eCliente clientes[], int tamCLI)
+{
+    int error = 1;
+    int idBici;
+    float total = 0;
+
+    if(unaBici != NULL && tam > 0 && unTrabajo!=NULL && tamT > 0 && servicios!=NULL && tamS>0)
+    {
+    system("cls");
+    printf("Informe total de una bici\n\n");
+    mostrarBicicletasTodo(unaBici,tam,colores,tamC,lTipo,tamTipo,clientes,tamCLI);
+    printf("Ingrese id de la bici: ");
+    scanf("%d", &idBici);
+    for(int i=0;i<tamT;i++)
+    {
+        if(unTrabajo[i].isEmpty == 0 && unTrabajo[i].idBicicleta == idBici)
+        {
+            for(int j=0;j<tamS;j++)
+            {
+                if(servicios[j].id == unTrabajo[i].idServicio)
+                {
+                total += servicios[j].precio;
+                }
+            }
+
+        }
+    }
+    printf("Total a pagar: %.2f\n\n", total);
+
+    error = 0;
+    }
+    return error;
+}
+*/

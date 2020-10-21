@@ -1,5 +1,6 @@
 #include "tipo.h"
 #include "color.h"
+#include "clientes.h"
 #ifndef BICICLETA_H_INCLUDED
 #define BICICLETA_H_INCLUDED
 
@@ -11,6 +12,7 @@ typedef struct
     int idColor;
     float rodado;
     int isEmpty;
+    int idCliente;
 }eBicicleta;
 
 #endif // BICICLETA_H_INCLUDED
@@ -41,7 +43,7 @@ int inicializarBicicletas(eBicicleta listado[], int tam);
  * \return int 1 error 0 OK
  *
  */
-int altaBicicleta(eBicicleta listado[], int tam, int id, eColor lColores[], int tamC, eTipo lTipos[],int tamT);
+int altaBicicleta(eBicicleta listado[], int tam, int id, eColor lColores[], int tamC, eTipo lTipos[],int tamT, eCliente clientes[], int tamCLI);
 /** \brief busca lugar libre en el array de estructuras
  *
  * \param listado[] eBicicleta
@@ -70,7 +72,7 @@ int buscarBicicleta(eBicicleta listado[], int tam, int id);
  * \return int 1 error 0 OK
  *
  */
-int bajaBicicleta(eBicicleta listado[], int tam, eColor colores[], int tamC, eTipo lTipos[], int tamT);
+int bajaBicicleta(eBicicleta listado[], int tam, eColor colores[], int tamC, eTipo lTipos[], int tamT, eCliente clientes[], int tamCLI);
 /** \brief Modifica una estructura de bicicleta
  *
  * \param listado[] eBicicleta
@@ -82,7 +84,7 @@ int bajaBicicleta(eBicicleta listado[], int tam, eColor colores[], int tamC, eTi
  * \return int 1 error 0 OK
  *
  */
-int modificarBicicleta(eBicicleta listado[], int tam, eColor unColor[], int tamC, eTipo unTiipo[], int tamT);
+int modificarBicicleta(eBicicleta listado[], int tam, eColor unColor[], int tamC, eTipo unTiipo[], int tamT, eCliente clientes[], int tamCLI);
 /** \brief hardcodea el array de estructuras
  *
  * \param listado[] eBicicleta
@@ -103,7 +105,7 @@ int hardcodearBicicletas(eBicicleta listado[], int tam, int cant);
  * \return int 1 error 0 OK
  *
  */
-int mostrarBicicletasTodo(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT);
+int mostrarBicicletasTodo(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
 /** \brief muestra una estructura
  *
  * \param unBicicleta eBicicleta
@@ -114,7 +116,7 @@ int mostrarBicicletasTodo(eBicicleta listado[], int tam, eColor listaC[], int ta
  * \return void
  *
  */
-void mostrarBicicletaTodo(eBicicleta unBicicleta, eColor unColor[],int tamC ,eTipo unTipo[],int tamT);
+void mostrarBicicletaTodo(eBicicleta unBicicleta, eColor unColor[],int tamC ,eTipo unTipo[],int tamT, eCliente clientes[], int tamCli);
 /** \brief obtiene la descripcion de color mediante ID
  *
  * \param unColor[] eColor
@@ -175,3 +177,110 @@ int obtenerIdTipo(eBicicleta unaBici[], int tam, int idBici);
  *
  */
 int validarIdBicicleta(int id,eBicicleta bici[], int tam);
+
+/** \brief Muestra las bicicletas que tengan el color y tipo a la vez
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param listaC[] eColor
+ * \param tamC int
+ * \param listaT[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return void
+ *
+ */
+void mostrarBiciPorColorSelec(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
+
+/** \brief muestra bicicletas segun el tipo seleccionado
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param listaC[] eColor
+ * \param tamC int
+ * \param listaT[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return void
+ *
+ */
+void mostrarBiciPorTipoSelec(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
+/** \brief informa bicicletas con el menor rodado
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param listaC[] eColor
+ * \param tamC int
+ * \param listaT[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return void
+ *
+ */
+void InformarBicicletasMenorRodado(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
+/** \brief cuenta la cantidad de bicicletas de ese tipo
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param listaC[] eColor
+ * \param tamC int
+ * \param listaT[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return void
+ *
+ */
+void ElegirColor_Tipo_contar(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
+/** \brief muestra las bicis con el color favorito
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param listaC[] eColor
+ * \param tamC int
+ * \param listaT[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return int
+ *
+ */
+int MostrarColoresFavoritosClientes(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
+/** \brief menu de informes
+ *
+ * \return int
+ *
+ */
+int informes();
+/** \brief menu para obtener la opcion del informe
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param unColor[] eColor
+ * \param tamC int
+ * \param unTiipo[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return int
+ *
+ */
+int elegirInforme(eBicicleta listado[], int tam, eColor unColor[], int tamC, eTipo unTiipo[], int tamT, eCliente clientes[], int tamCLI);
+/** \brief muestra las bicicletas segun el tipo
+ *
+ * \param listado[] eBicicleta
+ * \param tam int
+ * \param listaC[] eColor
+ * \param tamC int
+ * \param listaT[] eTipo
+ * \param tamT int
+ * \param clientes[] eCliente
+ * \param tamCLI int
+ * \return int
+ *
+ */
+int mostrarBicicletasXTipo(eBicicleta listado[], int tam, eColor listaC[], int tamC, eTipo listaT[], int tamT, eCliente clientes[], int tamCLI);
+

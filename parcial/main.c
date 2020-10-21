@@ -7,6 +7,7 @@
 #include "color.h"
 #include "servicio.h"
 #include "trabajo.h"
+#include "clientes.h"
 #define TAM 10
 #define TAM_T 4
 #define TAM_C 5
@@ -14,9 +15,9 @@
 #define ASC 0
 #define DESC 1
 #define TRABAJO 20
+#define TAM_CLI 5
 
 char menu();
-int mostrarTotalTrabajosDeBicis(eBicicleta unaBici[], int tam, eTrabajo unTrabajo[], int tamT, eServicio servicios[], int tamS, eTipo lTipo[], int tamTipo, eColor colores[],int tamC);
 
 int main()
 {
@@ -28,6 +29,7 @@ int main()
     eTipo lista_tipos[TAM_T];
     eColor lista_colores[TAM_C];
     eServicio lista_servicios[TAM_S];
+    eCliente lista_clientes[TAM_CLI];
 
     if(inicializarBicicletas(lista, TAM)==0 && inicializarTrabajos(lista_trabajos,TRABAJO))
     {
@@ -41,6 +43,7 @@ int main()
     hardcodearTipos(lista_tipos,TAM_T,4);
     hardcodearColores(lista_colores,TAM_C,5);
     hardcodearServicios(lista_servicios,TAM_S, 4);
+    hardcodearClientes(lista_clientes,TAM_CLI,4);
     proximoIdTrabajo+=hardcodearTrabajos(lista_trabajos,TRABAJO,5);
 
     char seguir = 's';
@@ -51,7 +54,7 @@ int main()
         {
 
         case 'a':
-        if(altaBicicleta(lista,TAM, proximoID,lista_colores,TAM_C,lista_tipos,TAM_T)==0)
+        if(altaBicicleta(lista,TAM, proximoID,lista_colores,TAM_C,lista_tipos,TAM_T,lista_clientes,TAM_CLI)==0)
         {
         proximoID++;
         printf("Alta exitosa!!! \n\n");
@@ -61,7 +64,7 @@ int main()
 
             break;
         case 'b':
-        rta =bajaBicicleta(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T);
+        rta =bajaBicicleta(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T,lista_clientes,TAM_CLI);
         if(rta==0)
         {
         printf("Baja exitosa\n");
@@ -75,7 +78,7 @@ int main()
 
             break;
         case 'c':
-            if(modificarBicicleta(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T)==0)
+            if(modificarBicicleta(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T,lista_clientes,TAM_CLI)==0)
             {
                 printf("\n\nModificacion exitosa\n");
             }else
@@ -86,7 +89,7 @@ int main()
         case 'd':
             system("cls");
             ordenarBici_tipo_rodado(lista,TAM,lista_tipos,TAM_T,ASC);
-            mostrarBicicletasTodo(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T);
+            mostrarBicicletasTodo(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T,lista_clientes,TAM_CLI);
 
             break;
         case 'e':
@@ -106,17 +109,17 @@ int main()
             case 'h':
             system("cls");
             printf("  *** ALta de Trabajos ***  \n\n");
-            mostrarBicicletasTodo(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T);
+            mostrarBicicletasTodo(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T,lista_clientes,TAM_CLI);
             altaTrabajo(lista_trabajos,TRABAJO,proximoIdTrabajo,lista,TAM,lista_servicios,TAM_S);
             break;
             case 'i':
             system("cls");
             mostrarTrabajos(lista_trabajos,TRABAJO,lista,TAM,lista_servicios,TAM_S,lista_tipos,TAM_T);
             break;
-            /*case 'j':
+            case 'j':
             system("cls");
-            mostrarTotalTrabajosDeBicis(lista,TAM,lista_trabajos,TRABAJO,lista_servicios,TAM_S,lista_tipos,TAM_T,lista_colores,TAM_C);
-            break;*/
+            elegirInforme(lista,TAM,lista_colores,TAM_C,lista_tipos,TAM_T,lista_clientes,TAM_CLI);
+            break;
         case 'z':
             printf("Confirma salida?: ");
             fflush(stdin);
@@ -157,6 +160,7 @@ char menu()
     printf("g Listar Servicios\n");
     printf("h Alta Trabajo\n");
     printf("i Listar Trabajos\n");
+    printf("j Informes\n");
     //printf("j Listar gasto total de servicios de una bici\n");
     printf("z Salir\n\n");
     printf("Ingrese opcion: ");
@@ -165,37 +169,6 @@ char menu()
 
     return opcion;
 }
+/*
 
-int mostrarTotalTrabajosDeBicis(eBicicleta unaBici[], int tam, eTrabajo unTrabajo[], int tamT, eServicio servicios[], int tamS, eTipo lTipo[], int tamTipo, eColor colores[],int tamC)
-{
-    int error = 1;
-    int idBici;
-    float total = 0;
-
-    if(unaBici != NULL && tam > 0 && unTrabajo!=NULL && tamT > 0 && servicios!=NULL && tamS>0)
-    {
-    system("cls");
-    printf("Informe total de una bici\n\n");
-    mostrarBicicletasTodo(unaBici,tam,colores,tamC,lTipo,tamTipo);
-    printf("Ingrese id de la bici: ");
-    scanf("%d", &idBici);
-    for(int i=0;i<tamT;i++)
-    {
-        if(unTrabajo[i].isEmpty == 0 && unTrabajo[i].idBicicleta == idBici)
-        {
-            for(int j=0;j<tamS;j++)
-            {
-                if(servicios[j].id == unTrabajo[i].idServicio)
-                {
-                total += servicios[j].precio;
-                }
-            }
-
-        }
-    }
-    printf("Total a pagar: %.2f\n\n", total);
-
-    error = 0;
-    }
-    return error;
-}
+*/

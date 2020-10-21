@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="bicicleta.h" />
+		<Unit filename="clientes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="clientes.h" />
 		<Unit filename="color.c">
 			<Option compilerVar="CC" />
 		</Unit>

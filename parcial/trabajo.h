@@ -82,3 +82,5 @@ int buscarLIbreT(eTrabajo listado[], int tam);
  *
  */
 int hardcodearTrabajos(eTrabajo trabajos[], int tam, int cant);
+
+//int mostrarTotalTrabajosDeBicis(eBicicleta unaBici[], int tam, eTrabajo unTrabajo[], int tamT, eServicio servicios[], int tamS, eTipo lTipo[], int tamTipo, eColor colores[],int tamC, eCliente clientes[], int tamCLI);

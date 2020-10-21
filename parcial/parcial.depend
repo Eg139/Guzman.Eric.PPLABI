@@ -18,7 +18,7 @@
 	<ctype.h>
 	<string.h>
 
-1603281327 source:c:\users\usuario\desktop\parcial\parcial\tipo.c
+1603282312 source:c:\users\usuario\desktop\parcial\parcial\tipo.c
 	"tipo.h"
 	<stdio.h>
 	<stdlib.h>
@@ -26,7 +26,7 @@
 	<string.h>
 	"dataStore.h"
 
-1603281440 source:c:\users\usuario\desktop\parcial\parcial\trabajo.c
+1603291736 source:c:\users\usuario\desktop\parcial\parcial\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -34,18 +34,19 @@
 	"trabajo.h"
 	"bicicleta.h"
 
-1603255224 source:c:\users\usuario\desktop\parcial\parcial\bicicleta.c
+1603291711 source:c:\users\usuario\desktop\parcial\parcial\bicicleta.c
 	"bicicleta.h"
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 
-1603255810 c:\users\usuario\desktop\parcial\parcial\bicicleta.h
+1603291988 c:\users\usuario\desktop\parcial\parcial\bicicleta.h
 	"tipo.h"
 	"color.h"
+	"clientes.h"
 
-1603281477 source:c:\users\usuario\desktop\parcial\parcial\main.c
+1603291269 source:c:\users\usuario\desktop\parcial\parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -55,6 +56,7 @@
 	"color.h"
 	"servicio.h"
 	"trabajo.h"
+	"clientes.h"
 
 1603254274 c:\users\usuario\desktop\parcial\parcial\tipo.h
 
@@ -64,10 +66,19 @@
 
 1603254544 c:\users\usuario\desktop\parcial\parcial\servicio.h
 
-1603254061 c:\users\usuario\desktop\parcial\parcial\trabajo.h
+1603291743 c:\users\usuario\desktop\parcial\parcial\trabajo.h
 	"bicicleta.h"
 	"servicio.h"
 	"fecha.h"
 
 1603254636 c:\users\usuario\desktop\parcial\parcial\fecha.h
+
+1603291128 source:c:\users\usuario\desktop\parcial\parcial\clientes.c
+	"clientes.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1603291202 c:\users\usuario\desktop\parcial\parcial\clientes.h
 
