@@ -306,6 +306,7 @@ int mostrarBicicletasTodo(eBicicleta listado[], int tam, eColor listaC[], int ta
     int flag = 0;
     if(listado != NULL && tam > 0 && listaC != NULL && tamC > 0 && listaT !=NULL && tamT>0)
     {
+        printf("    ***  Listado de Bicis  *** \n");
     printf("    ID        Color        Tipo          Marca     Rodado\n");
     printf("---------------------------------------------------------\n");
     for(int i = 0; i<tam; i++)

@@ -10,6 +10,7 @@ int mostrarServicios(eServicio listado[], int tam)
     int flag = 0;
     if(listado != NULL && tam > 0)
     {
+    printf("   ***  Listado de Servicios  ***\n");
     printf("   ID     Descripcion     Precio\n");
     printf("--------------------------------\n");
     for(int i = 0; i<tam; i++)

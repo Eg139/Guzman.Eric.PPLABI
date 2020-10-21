@@ -113,10 +113,10 @@ int main()
             system("cls");
             mostrarTrabajos(lista_trabajos,TRABAJO,lista,TAM,lista_servicios,TAM_S,lista_tipos,TAM_T);
             break;
-            case 'j':
+            /*case 'j':
             system("cls");
             mostrarTotalTrabajosDeBicis(lista,TAM,lista_trabajos,TRABAJO,lista_servicios,TAM_S,lista_tipos,TAM_T,lista_colores,TAM_C);
-            break;
+            break;*/
         case 'z':
             printf("Confirma salida?: ");
             fflush(stdin);
@@ -157,7 +157,7 @@ char menu()
     printf("g Listar Servicios\n");
     printf("h Alta Trabajo\n");
     printf("i Listar Trabajos\n");
-    printf("j Listar gasto total de servicios de una bici\n");
+    //printf("j Listar gasto total de servicios de una bici\n");
     printf("z Salir\n\n");
     printf("Ingrese opcion: ");
     fflush(stdin);

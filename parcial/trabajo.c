@@ -73,6 +73,7 @@ int altaTrabajo(eTrabajo trabajos[], int tam,int id,eBicicleta bici[], int tamB,
 
     if(trabajos != NULL && tam > 0 && id>0)
     {
+        printf("   ***  Alta Trabajo  *** \n");
 
         indice = buscarLIbreT(trabajos, tam);
         if(indice == -1)

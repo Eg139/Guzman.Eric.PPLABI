@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1603250732 source:c:\users\usuario\desktop\parcial\parcial\color.c
+1603281312 source:c:\users\usuario\desktop\parcial\parcial\color.c
 	"color.h"
 	<stdio.h>
 	<stdlib.h>
@@ -11,14 +11,14 @@
 	<stdio.h>
 	<stdlib.h>
 
-1603250753 source:c:\users\usuario\desktop\parcial\parcial\servicio.c
+1603281318 source:c:\users\usuario\desktop\parcial\parcial\servicio.c
 	"Servicio.h"
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 
-1603250663 source:c:\users\usuario\desktop\parcial\parcial\tipo.c
+1603281327 source:c:\users\usuario\desktop\parcial\parcial\tipo.c
 	"tipo.h"
 	<stdio.h>
 	<stdlib.h>
@@ -26,7 +26,7 @@
 	<string.h>
 	"dataStore.h"
 
-1603251693 source:c:\users\usuario\desktop\parcial\parcial\trabajo.c
+1603281440 source:c:\users\usuario\desktop\parcial\parcial\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -45,7 +45,7 @@
 	"tipo.h"
 	"color.h"
 
-1603255238 source:c:\users\usuario\desktop\parcial\parcial\main.c
+1603281477 source:c:\users\usuario\desktop\parcial\parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

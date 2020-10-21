@@ -11,6 +11,7 @@ int mostrarTipos(eTipo listado[], int tam)
     int flag = 0;
     if(listado != NULL && tam > 0)
     {
+    printf("   ***  Listado de Tipos  ***  \n");
     printf("   ID     Descripcion\n");
     printf("---------------------\n");
     for(int i = 0; i<tam; i++)
